@@ -1,0 +1,19 @@
+environments:
+- apps:
+  - name: taxi
+    services:
+    - name: taxi-svc
+      source_url: http://github.com/chetan-rns/taxi
+      webhook:
+        secret:
+          name: github-webhook-secret-taxi-svc
+  name: dev
+  pipelines:
+    integration:
+      binding: github-pr-binding
+      template: app-ci-template
+- name: stage
+- cicd: true
+  name: cicd
+- argo: true
+  name: argocd
