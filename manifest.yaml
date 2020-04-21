@@ -7,6 +7,7 @@ environments:
       webhook:
         secret:
           name: github-webhook-secret-taxi-svc
+          namespace: cicd
   name: dev
   pipelines:
     integration:

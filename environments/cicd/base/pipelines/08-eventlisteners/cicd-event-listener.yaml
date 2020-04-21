@@ -16,7 +16,8 @@ spec:
           == 'chetan-rns/taxi'
     - github:
         secretRef:
-          secretKey: github-webhook-secret-taxi-svc
+          namespace: cicd
+          secretKey: webhook-secret-key
           secretName: github-webhook-secret-taxi-svc
     name: app-ci-build-from-pr-taxi-svc
     template:
